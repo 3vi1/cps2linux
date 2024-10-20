@@ -35,7 +35,7 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
 # Quick notes about running CBM Prg Studio x86 via WINE:
 
 * You must install .Net 4.6.2 (winetricks makes this easy)
-* You _probably_ need to add . to your PATHEXT registry setting for your WINE prefix.
+* You _probably_ need to add . to your PATHEXT registry setting for your WINE prefix in order to allow the call to cps2linux as an executable.  You could maybe rename it .exe instead and add .exe to the path in the instructions above.
   
       k='HKLM\System\CurrentControlSet\Control\Session Manager\Environment'
       pathext_orig=$( wine reg query "$k" /v PATHEXT | tr -d '\r' | awk '/^  /{ print $3 }' )
