@@ -1,4 +1,5 @@
-Cps2Linux is a small shim meant to enable Linux users to call native emulators and debuggers when running CBM Prg Studio x86 via WINE.
+# Cps2Linux
+Cps2Linux is a small shim meant to enable Linux users to call native Linux emulators and debuggers while running CBM Prg Studio x86 via WINE.
 
 Cps2linux ingests parameters and does two things:  
 1) It rewrites any parameters using WINE's Z:\path format to standard Linux /path format.
@@ -28,3 +29,14 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
       * Use C64 Debugger
           * Parameters:  Add "-c2l_retrodebugger" to parameters (without the quotes).
           * Location: Z:\home\your_user_name\bin\cps2linux.
+
+<br><br>
+
+# Quick notes about running CBM Prg Studio x86 via WINE:
+
+* You must install .Net 4.6.2 (winetricks makes this easy)
+* I only tested using a 32-bit prefix
+* CBM Prg Studio does have some bugs that show up mor readily when run this way.
+    * You'll have issues if you try to do things like rename files in the GUI.
+    * You may see occasional crashes when doing things like invoking the sprite editor.
+* Save frequently.  Have backups.  Use git version control!
