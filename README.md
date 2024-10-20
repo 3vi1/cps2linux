@@ -1,5 +1,5 @@
 # Cps2Linux
-Cps2Linux is a small shim meant to enable Linux users to call native Linux emulators and debuggers while running CBM Prg Studio x86 via WINE.
+Cps2Linux is a small shim meant to enable Linux users to call native Linux emulators and debuggers while running [CBM Prg Studio x86](https://www.ajordison.co.uk) via WINE.
 
 Cps2linux ingests parameters and does two things:  
 1) It rewrites any parameters using WINE's Z:\path format to standard Linux /path format.
@@ -9,7 +9,7 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
 
 * Compile cps2linux and place the binary in your ~/bin folder.
 
-* If you're using RetroDebugger, make sure it's in your path.  You can do this by adding a symbolic link to it in your user bin path.
+* If you're using [RetroDebugger](https://github.com/slajerek/RetroDebugger), make sure it's in your path.  You can do this by adding a symbolic link to it in your user bin path.
   
       ln -s /path/to/wherever_retrobugger_exist ~/bin/retrodebugger
   
