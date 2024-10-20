@@ -1,3 +1,9 @@
+Cps2linux ingests parameters and does two things:  
+1) It rewrites any parameters using WINE's Z:\path format to standard Linux /path format.
+2) It looks for -c2l_* type parameters and uses the portion denoted here by the wildcard as the actual executable it should call.
+
+Why not just call BASH as the executable and pass a scriptname in the parameters, replacing this with 3 lines of shell?  That works for the "Run" function that starts the emulator, but when VICE is set as the debugger it would fail because the user-defined parameters are not passed before the -moncommands parameter by CBM Prg Studio x86.  This can't be worked around by calling the script directly:  WINE can not call scripts directly, because Windows has no idea how to invoke the related shell.
+
 * Compile cps2linux and place the binary in your ~/bin folder.
 
 * If you're using RetroDebugger, make sure it's in your path.  You can do this by adding a symbolic link to it in your user bin path.
