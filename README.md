@@ -35,6 +35,14 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
 # Quick notes about running CBM Prg Studio x86 via WINE:
 
 * You must install .Net 4.6.2 (winetricks makes this easy)
+* You _probably_ need to add . to your PATHEXT registry setting for your WINE prefix.
+  
+      k='HKLM\System\CurrentControlSet\Control\Session Manager\Environment'
+      pathext_orig=$( wine reg query "$k" /v PATHEXT | tr -d '\r' | awk '/^  /{ print $3 }' )
+      echo "$pathext_orig" | grep -qE '(^|;)\.(;|$)' | wine reg add "$k" /v PATHEXT /f /d "${pathext_orig};."
+
+    (courtesy of ruvim)
+  
 * I only tested using a 32-bit prefix
 * CBM Prg Studio does have some bugs that show up mor readily when run this way.
     * You'll have issues if you try to do things like rename files in the GUI.
