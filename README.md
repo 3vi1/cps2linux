@@ -1,3 +1,5 @@
+Cps2Linux is a small shim meant to enable Linux users to call native emulators and debuggers when running CBM Prg Studio x86 via WINE.
+
 Cps2linux ingests parameters and does two things:  
 1) It rewrites any parameters using WINE's Z:\path format to standard Linux /path format.
 2) It looks for -c2l_* type parameters and uses the portion denoted here by the wildcard as the actual executable it should call.
