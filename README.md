@@ -24,6 +24,7 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
            Note that you would replace the "x64" portion with the name of another emulator if configuring for systems other than the commodore 64.
 
   * Debugger
+
       Switch from Use CBM prg Studio Debugger to either Use VICE Debugger or Use C64 Debugger.
 
       * Use C64 Debugger
