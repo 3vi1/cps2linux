@@ -36,7 +36,7 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
 # Quick notes about running CBM Prg Studio x86 via WINE:
 
 * You must install .Net 4.6.2 (winetricks makes this easy)
-* You _probably_ need to add . to your PATHEXT registry setting for your WINE prefix in order to allow the call to cps2linux as an executable.  You could maybe rename it .exe instead and add .exe to the path in the instructions above.
+* You _probably_ need to add . to your PATHEXT registry setting for your WINE prefix in order to allow the call to cps2linux as an executable.  You could maybe rename it .exe instead and add .exe to the path in the instructions above, rather than running the commands here.
   
       k='HKLM\System\CurrentControlSet\Control\Session Manager\Environment'
       pathext_orig=$( wine reg query "$k" /v PATHEXT | tr -d '\r' | awk '/^  /{ print $3 }' )
@@ -45,7 +45,7 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
     (courtesy of ruvim)
   
 * I only tested using a 32-bit prefix
-* CBM Prg Studio does have some bugs that show up mor readily when run this way.
+* CBM Prg Studio does have some bugs that show up more readily when run this way.
     * You'll have issues if you try to do things like rename files in the GUI.
     * You may see occasional crashes when doing things like invoking the sprite editor.
 * Save frequently.  Have backups.  Use git version control!
