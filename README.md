@@ -48,4 +48,8 @@ Why not just call BASH as the executable and pass a scriptname in the parameters
 * CBM Prg Studio does have some bugs that show up more readily when run this way.
     * You'll have issues if you try to do things like rename files in the GUI.
     * You may see occasional crashes when doing things like invoking the sprite editor.
+* You can configure native Linux tools directly in CBM Prg Studio by using the Z:\path format, but this likely requires the PATHEXT fix mentioned above to work.  I set my apps as follows:
+    * Calculator:  Z:\usr\bin\speedcrunch
+    * Notepad: Z:\usr\bin\code-insiders
+    * Paint: Z:\usr\bin\gimp
 * Save frequently.  Have backups.  Use git version control!
