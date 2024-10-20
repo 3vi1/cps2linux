@@ -1,0 +1,9 @@
+build
+.gitattributes
+log/
+*.so
+*.a
+Debug/
+core.*
+core
+*~
